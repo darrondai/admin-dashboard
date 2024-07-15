@@ -116,9 +116,54 @@ body {
 }
 
 .header {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 1fr 2fr;
+
   background-color: white;
 }
 
+.search-bar,
+.profile-blurb {
+  display: flex;
+  gap: 32px;
+}
+
+.search-bar > input {
+  flex: auto;
+  background-color: lightgray;
+  border: none;
+  border-radius: 32px;
+  padding: 8px;
+}
+
+.profile-blurb {
+  justify-content: center;
+}
+
+.greeting {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 2fr;
+}
+
+.greeting img {
+  grid-row: 1 / span 2;
+}
+
+.action-buttons {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 32px;
+}
+
+.action-buttons > button {
+  border: none;
+  border-radius: 32px;
+  background-color: blue;
+  color: white;
+}
+
 .main-content {
-  background-color: grey;
+  background-color: lightgray;
 }
