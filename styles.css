@@ -12,7 +12,7 @@
 */
 * {
   margin: 0;
-  border: 1px solid rebeccapurple;
+  /* border: 1px solid rebeccapurple; */
 }
 /*
   Typographic tweaks!
@@ -122,9 +122,18 @@ body {
   display: grid;
   grid-template-columns: 3fr 2fr;
   grid-template-rows: 1fr 2fr;
-  margin: 24px 36px;
+  padding: 12px 36px;
+  grid-row-gap: 12px;
 
   background-color: white;
+  box-shadow: 0px 2px 5px grey;
+  position: relative;
+}
+
+.header > * {
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 .header svg {
@@ -136,7 +145,7 @@ body {
 .profile-pic {
   object-fit: cover;
   border-radius: 100%;
-  height: 64px;
+  width: 48px;
 }
 
 .search-bar,
@@ -154,30 +163,46 @@ body {
 }
 
 .profile-blurb {
-  justify-content: center;
+  justify-content: end;
 }
 
 .greeting {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 2fr;
+  display: flex;
+  gap: 16px;
 }
 
-.greeting img {
-  grid-row: 1 / span 2;
+.greeting .profile-pic {
+  width: 80px;
+}
+
+.greeting-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.greeting-text p:first-child {
+  flex: 1 1 auto;
+  font-size: 1rem;
+}
+
+.greeting-text p:last-child {
+  flex: 2 2 auto;
+  font-size: 1.5rem;
 }
 
 .action-buttons {
-  display: grid;
-  grid-auto-flow: column;
+  display: flex;
+  justify-content: space-evenly;
   gap: 32px;
 }
 
 .action-buttons > button {
+  flex: 1 1 32px;
   border: none;
   border-radius: 32px;
   background-color: blue;
   color: white;
+  padding: 8px 0px;
 }
 
 .main-content {
