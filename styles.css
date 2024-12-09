@@ -234,7 +234,7 @@ body {
   gap: 24px;
 }
 
-.project-card {
+.card {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -243,7 +243,7 @@ body {
   padding: 32px;
 }
 
-.project-card .actions {
+.card .actions {
   margin-top: auto;
   display: flex;
   justify-content: right;
