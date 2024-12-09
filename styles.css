@@ -249,3 +249,38 @@ body {
   justify-content: right;
   gap: 16px;
 }
+
+.card p:first {
+  font-size: 1.2rem;
+}
+
+.card p:nth-child(2) {
+  font-size: 0.9rem;
+}
+
+.trending {
+  align-content: end;
+}
+
+.trending .card ul {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  gap: 16px;
+}
+
+.trending .card ul li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto 1fr;
+  column-gap: 8px;
+}
+
+.trending .card ul li .profile-pic {
+  grid-row: span 2;
+  grid-column: 1;
+}
