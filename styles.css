@@ -75,7 +75,7 @@ body {
 }
 
 .bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .sidebar {
@@ -207,4 +207,45 @@ body {
 
 .main-content {
   background-color: lightgray;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 32px 24px;
+  column-gap: 16px;
+}
+
+.main-content svg {
+  height: 1.5rem;
+  justify-self: center;
+  width: auto;
+}
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  grid-row: span 2;
+}
+
+.projects-grid {
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 24px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 1px 2px 4px grey;
+  border-radius: 8px;
+  padding: 32px;
+}
+
+.project-card .actions {
+  margin-top: auto;
+  display: flex;
+  justify-content: right;
+  gap: 16px;
 }
